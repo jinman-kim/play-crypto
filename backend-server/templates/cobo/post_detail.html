@@ -1,0 +1,17 @@
+<!-- cobo/templates/cobo/post_detail.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="layoutSidenav_content">
+<main>
+    <div class="container mt-4">
+        <h2>{{ post.title }}</h2>
+        <p>작성자: {{ post.author }}</p>
+        <p>작성일: {{ post.created_at }}</p>
+        <hr>
+        <p>{{ post.content }}</p>
+        <a href="{% url 'cobo:board_list' %}">목록으로 돌아가기</a>
+    </div>
+</main>
+{% endblock %}
